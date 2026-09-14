@@ -1,0 +1,163 @@
+/* --- Basic Reset --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* --- Header --- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #555;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #007bff;
+}
+
+/* --- Hero Section (2 Parts) --- */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 10%;
+  background-color: #ffffff;
+  gap: 40px;
+}
+
+.hero-left {
+  flex: 1; /* Left side text ke liye */
+}
+
+.hero-left h1 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.hero-left h1 span {
+  color: #007bff;
+}
+
+.hero-left p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.hero-right {
+  flex: 1; /* Right side image/box ke liye */
+  display: flex;
+  justify-content: center;
+}
+
+.photo-box {
+  width: 250px;
+  height: 250px;
+  background-color: #e2e8f0;
+  border: 2px dashed #cbd5e1;
+  border-radius: 50%; /* Gol shape ke liye */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  font-weight: bold;
+}
+
+/* --- Sections General Styling --- */
+.section {
+  padding: 60px 10%;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.about-text {
+  max-width: 600px;
+  margin: 0 auto;
+  color: #555;
+}
+
+/* --- Projects --- */
+.projects-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  background: white;
+  padding: 20px;
+  width: 280px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.project-card h3 {
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+/* --- Footer --- */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  margin-top: 40px;
+}
+
+/* --- Mobile ke liye (Responsive) --- */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column; /* Mobile mein upar-neeche ho jayega */
+    text-align: center;
+  }
+  
+  .hero-left {
+    text-align: center;
+  }
+}

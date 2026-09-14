@@ -1,0 +1,274 @@
+/* --- Basic Reset & Colors --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #fdfcff;
+  color: #2d3748;
+}
+
+/* --- Header --- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background-color: #ffffff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #4a5568;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ff416c;
+}
+
+.nav-contact-btn {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white !important;
+  padding: 8px 18px;
+  border-radius: 20px;
+}
+
+/* --- Hero Section (Colorful & 2 Parts) --- */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 10%;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  gap: 40px;
+  min-height: 80vh;
+}
+
+.hero-left {
+  flex: 1;
+}
+
+.welcome-tag {
+  display: inline-block;
+  background-color: #fff;
+  color: #ff416c;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  margin-bottom: 15px;
+}
+
+.hero-left h1 {
+  font-size: 45px;
+  margin-bottom: 15px;
+  color: #1a202c;
+}
+
+/* Colorful Gradient Text */
+.gradient-text {
+  background: linear-gradient(45deg, #ff416c, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-left p {
+  font-size: 18px;
+  color: #4a5568;
+  margin-bottom: 25px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+/* Buttons Styling */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.primary-btn {
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  color: white;
+}
+
+.secondary-btn {
+  background-color: white;
+  color: #764ba2;
+  border: 2px solid #764ba2;
+}
+
+/* Right Side Colorful Photo Box */
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.photo-box {
+  width: 280px;
+  height: 280px;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; /* Fun organic shape */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 10px 30px rgba(118, 75, 162, 0.3);
+  animation: morph 6s ease-in-out infinite;
+}
+
+/* Optional soft animation for photo box shape */
+@keyframes morph {
+  0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+  50% { border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%; }
+  100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+}
+
+/* --- Sections General --- */
+.section {
+  padding: 70px 10%;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #1a202c;
+}
+
+.about-section {
+  background-color: #ffffff;
+}
+
+.about-text {
+  max-width: 650px;
+  margin: 0 auto;
+  color: #4a5568;
+  font-size: 18px;
+}
+
+/* --- Projects --- */
+.projects-section {
+  background: linear-gradient(135deg, #fbc53122 0%, #00a8ff22 100%);
+}
+
+.projects-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.project-card {
+  background: white;
+  padding: 25px;
+  width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Top colorful lines for cards */
+.card-color-bar {
+  height: 6px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.pink-bar { background: linear-gradient(45deg, #ff416c, #ff4b2b); }
+.purple-bar { background: linear-gradient(45deg, #667eea, #764ba2); }
+.blue-bar { background: linear-gradient(45deg, #00c6ff, #0072ff); }
+
+.project-card h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #2d3748;
+}
+
+.project-card p {
+  color: #718096;
+  font-size: 15px;
+}
+
+/* --- Contact Section --- */
+.contact-section {
+  background-color: #ffffff;
+}
+
+.contact-section p {
+  color: #4a5568;
+  margin-bottom: 20px;
+}
+
+/* --- Footer --- */
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #1a202c;
+  color: white;
+  font-size: 15px;
+}
+
+/* --- Mobile ke liye (Responsive) --- */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 5%;
+  }
+  
+  .hero-left h1 {
+    font-size: 35px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+  
+  header {
+    padding: 15px 5%;
+  }
+}
