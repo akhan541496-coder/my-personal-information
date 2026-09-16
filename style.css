@@ -1,274 +1,410 @@
-/* --- Basic Reset & Colors --- */
+:root {
+  --bg-color: #0b0f19;
+  --card-bg: #131b2e;
+  --border-color: #1e293b;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --accent-color: #6366f1;
+  --accent-gradient: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
   line-height: 1.6;
-  background-color: #fdfcff;
-  color: #2d3748;
 }
 
-/* --- Header --- */
-header {
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 10%;
-  background-color: #ffffff;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  padding: 20px 8%;
+  background: rgba(11, 15, 25, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-color);
+  z-index: 1000;
 }
 
 .logo {
-  font-size: 22px;
-  font-weight: bold;
-  background: linear-gradient(45deg, #ff416c, #ff4b2b);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-main);
 }
 
-nav a {
-  margin-left: 25px;
-  text-decoration: none;
-  color: #4a5568;
-  font-weight: 600;
-  transition: color 0.3s;
+.logo span {
+  color: #ec4899;
 }
 
-nav a:hover {
-  color: #ff416c;
-}
-
-.nav-contact-btn {
-  background: linear-gradient(45deg, #667eea, #764ba2);
-  color: white !important;
-  padding: 8px 18px;
-  border-radius: 20px;
-}
-
-/* --- Hero Section (Colorful & 2 Parts) --- */
-.hero {
+.nav-links {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 80px 10%;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  gap: 40px;
-  min-height: 80vh;
+  gap: 2rem;
 }
 
-.hero-left {
-  flex: 1;
+.nav-links a {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
-.welcome-tag {
+.nav-links a:hover {
+  color: var(--text-main);
+}
+
+.nav-btn {
+  background: var(--accent-gradient);
+  color: white !important;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+/* Hero Section */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 8%;
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 4rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 60px;
+}
+
+.badge {
   display: inline-block;
-  background-color: #fff;
-  color: #ff416c;
+  background-color: rgba(99, 102, 241, 0.1);
+  color: #818cf8;
   padding: 6px 14px;
   border-radius: 20px;
-  font-size: 14px;
-  font-weight: bold;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  margin-bottom: 15px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  border: 1px solid rgba(99, 102, 241, 0.2);
 }
 
-.hero-left h1 {
-  font-size: 45px;
-  margin-bottom: 15px;
-  color: #1a202c;
+.hero-content h1 {
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 1rem;
 }
 
-/* Colorful Gradient Text */
-.gradient-text {
-  background: linear-gradient(45deg, #ff416c, #764ba2);
+/* Pure CSS Typing Animation */
+.css-typing {
+  background: var(--accent-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  display: inline-block;
+  position: relative;
 }
 
-.hero-left p {
-  font-size: 18px;
-  color: #4a5568;
-  margin-bottom: 25px;
+.css-typing::before {
+  content: "";
+  animation: words 8s infinite;
+}
+
+.css-typing::after {
+  content: "|";
+  position: absolute;
+  right: -12px;
+  color: #ec4899;
+  -webkit-text-fill-color: #ec4899;
+  animation: cursorBlink 0.75s infinite;
+}
+
+@keyframes words {
+  0% { content: ""; }
+  3% { content: "M"; }
+  6% { content: "MO"; }
+  9% { content: "MOH"; }
+  12% { content: "MOHAM"; }
+  15% { content: "MOHAMMA"; }
+  18% { content: "MOHAMMAD"; }
+  21% { content: "MOHAMMAD "; }
+  24% { content: "MOHAMMAD A"; }
+  27% { content: "MOHAMMAD AA"; }
+  30% { content: "MOHAMMAD AAS"; }
+  33% { content: "MOHAMMAD AASI"; }
+  36% { content: "MOHAMMAD AASIF"; }
+  39% { content: "MOHAMMAD AASIF "; }
+  42% { content: "MOHAMMAD AASIF K"; }
+  45% { content: "MOHAMMAD AASIF KH"; }
+  48% { content: "MOHAMMAD AASIF KHA"; }
+  51% { content: "MOHAMMAD AASIF KHAN"; }
+  60% { content: "MOHAMMAD AASIF KHAN"; }
+  65% { content: "W"; }
+  68% { content: "WE"; }
+  71% { content: "WEB"; }
+  74% { content: "WEB "; }
+  77% { content: "WEB D"; }
+  80% { content: "WEB DE"; }
+  83% { content: "WEB DEVE"; }
+  86% { content: "WEB DEVELOP"; }
+  89% { content: "WEB DEVELOPER"; }
+  98% { content: "WEB DEVELOPER"; }
+  100% { content: ""; }
+}
+
+@keyframes cursorBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.hero-description {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  max-width: 500px;
+  margin-bottom: 2rem;
 }
 
 .hero-buttons {
   display: flex;
-  gap: 15px;
+  gap: 1rem;
 }
 
-/* Buttons Styling */
 .btn {
-  display: inline-block;
   padding: 12px 24px;
-  text-decoration: none;
-  border-radius: 30px;
-  font-weight: bold;
-  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  display: inline-block;
 }
 
 .btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
+  opacity: 0.9;
 }
 
-.primary-btn {
-  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+.btn-primary {
+  background: var(--accent-gradient);
   color: white;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
 }
 
-.secondary-btn {
-  background-color: white;
-  color: #764ba2;
-  border: 2px solid #764ba2;
+.btn-outline {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
 }
 
-/* Right Side Colorful Photo Box */
-.hero-right {
-  flex: 1;
+/* Hero Image (Round) */
+.hero-image-wrapper {
   display: flex;
   justify-content: center;
 }
 
-.photo-box {
+.photo-card {
   width: 280px;
   height: 280px;
-  background: linear-gradient(45deg, #667eea, #764ba2);
-  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; /* Fun organic shape */
-  display: flex;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid var(--accent-color);
+  box-shadow: 0 20px 40px rgba(99, 102, 241, 0.25);
+  background-color: var(--card-bg);
+}
+
+.photo-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* About Section (Rectangular Image) */
+.about-section {
+  padding: 7rem 8%;
+  background-color: rgba(19, 27, 46, 0.3);
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
   align-items: center;
-  justify-content: center;
-  color: white;
-  font-weight: bold;
-  box-shadow: 0 10px 30px rgba(118, 75, 162, 0.3);
-  animation: morph 6s ease-in-out infinite;
+  gap: 4rem;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-/* Optional soft animation for photo box shape */
-@keyframes morph {
-  0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
-  50% { border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%; }
-  100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+.about-rect-photo {
+  width: 100%;
+  max-width: 350px;
+  height: 420px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 2px solid var(--border-color);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  background-color: var(--card-bg);
+  margin: 0 auto;
 }
 
-/* --- Sections General --- */
+.about-rect-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-text-content h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+}
+
+.about-desc {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 1.5rem;
+}
+
+.skills-tags span {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  color: #818cf8;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Services Section Layout */
 .section {
-  padding: 70px 10%;
+  padding: 6rem 8%;
   text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .section h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-  color: #1a202c;
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
 }
 
-.about-section {
-  background-color: #ffffff;
+.section-subtext {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  max-width: 600px;
+  margin: 0 auto 3rem auto;
 }
 
-.about-text {
-  max-width: 650px;
-  margin: 0 auto;
-  color: #4a5568;
-  font-size: 18px;
-}
-
-/* --- Projects --- */
-.projects-section {
-  background: linear-gradient(135deg, #fbc53122 0%, #00a8ff22 100%);
-}
-
-.projects-container {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  flex-wrap: wrap;
-  margin-top: 30px;
-}
-
-.project-card {
-  background: white;
-  padding: 25px;
-  width: 300px;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+/* Yahan Grid / Flex use kiya hai taaki teeno ek hi line mein aayein */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
   text-align: left;
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.3s;
 }
 
-.project-card:hover {
-  transform: translateY(-8px);
+.service-box {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-/* Top colorful lines for cards */
-.card-color-bar {
-  height: 6px;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+.service-box:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-color);
 }
 
-.pink-bar { background: linear-gradient(45deg, #ff416c, #ff4b2b); }
-.purple-bar { background: linear-gradient(45deg, #667eea, #764ba2); }
-.blue-bar { background: linear-gradient(45deg, #00c6ff, #0072ff); }
-
-.project-card h3 {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  color: #2d3748;
+.service-icon {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
 }
 
-.project-card p {
-  color: #718096;
-  font-size: 15px;
+.service-box h3 {
+  margin-bottom: 0.2rem;
+  font-size: 1.25rem;
 }
 
-/* --- Contact Section --- */
-.contact-section {
-  background-color: #ffffff;
+.service-price {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ec4899;
+  margin-bottom: 1.5rem;
 }
 
-.contact-section p {
-  color: #4a5568;
-  margin-bottom: 20px;
+.service-price span {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--text-muted);
 }
 
-/* --- Footer --- */
-footer {
-  text-align: center;
-  padding: 25px;
-  background: #1a202c;
-  color: white;
-  font-size: 15px;
+/* Checkbox Features Styling */
+.service-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-/* --- Mobile ke liye (Responsive) --- */
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
+.service-features li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+}
+
+.check-icon {
+  background-color: rgba(99, 102, 241, 0.15);
+  color: #818cf8;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* Mobile responsive (Choti screens par cards ek ke niche ek aa jayenge) */
+@media (max-width: 950px) {
+  .services-grid {
+    grid-template-columns: 1fr;
     text-align: center;
-    padding: 50px 5%;
   }
-  
-  .hero-left h1 {
-    font-size: 35px;
-  }
-
-  .hero-buttons {
+  .service-features li {
     justify-content: center;
-  }
-  
-  header {
-    padding: 15px 5%;
   }
 }

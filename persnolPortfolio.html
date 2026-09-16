@@ -3,85 +3,128 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Colorful Portfolio</title>
+  <title>Mohammad Aasif Khan - Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Header / Navigation -->
-  <header>
-    <div class="logo">✨ MyPortfolio</div>
-    <nav>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">Portfolio<span>.</span></div>
+    <nav class="nav-links">
       <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact" class="nav-contact-btn">Contact</a>
+      <a href="#services">What I Do</a>
+      <a href="#contact" class="nav-btn">Contact</a>
     </nav>
   </header>
 
-  <!-- Hero Section (Colorful & 2 Parts: Left Text, Right Photo Box) -->
-  <section class="hero">
-    <div class="hero-left">
-      <span class="welcome-tag">👋 Welcome to my world</span>
-      <h1>Hi, I'm <span class="gradient-text">Your Name</span></h1>
-      <p>A passionate beginner web developer creating colorful, fun, and modern websites using HTML & CSS.</p>
-      <div class="hero-buttons">
-        <a href="#projects" class="btn primary-btn">View My Work</a>
-        <a href="#contact" class="btn secondary-btn">Let's Talk</a>
-      </div>
-    </div>
-    
-    <div class="hero-right">
-      <div class="photo-box">
-        <p>🎨 Your Photo Here</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="section about-section">
-    <h2>About Me 🚀</h2>
-    <p class="about-text">
-      Hello! I love building creative and colorful web pages. I am currently learning web development and exploring how to make designs pop out with vibrant colors and animations.
-    </p>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="section projects-section">
-    <h2>Awesome Projects 💡</h2>
-    <div class="projects-container">
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+    <div class="hero-container">
       
-      <div class="project-card">
-        <div class="card-color-bar pink-bar"></div>
-        <h3>Project One</h3>
-        <p>A colorful landing page built with HTML and CSS featuring modern gradients.</p>
+      <!-- Left Content -->
+      <div class="hero-content">
+        <span class="badge">Welcome ✌️</span>
+        <h1>Hi, I'm <br>
+          <span class="css-typing"></span>
+        </h1>
+        <p class="hero-description">
+          I am a passionate web developer creating clean, modern, and beautiful user interfaces using HTML and CSS.
+        </p>
+        <div class="hero-buttons">
+          <a href="#services" class="btn btn-primary">My Services</a>
+          <a href="#contact" class="btn btn-outline">Let's Talk</a>
+        </div>
       </div>
 
-      <div class="project-card">
-        <div class="card-color-bar purple-bar"></div>
-        <h3>Project Two</h3>
-        <p>An interactive weather app design with clean layouts and bright cards.</p>
-      </div>
-
-      <div class="project-card">
-        <div class="card-color-bar blue-bar"></div>
-        <h3>Project Three</h3>
-        <p>A creative personal blog layout with smooth hover effects and shadows.</p>
+      <!-- Right Photo Frame -->
+      <div class="hero-image-wrapper">
+        <div class="photo-card">
+          <img src="aasif.jpeg" alt="Mohammad Aasif Khan">
+        </div>
       </div>
 
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section contact-section">
-    <h2>Get In Touch 📬</h2>
-    <p>Want to work together or say hello? Drop me an email!</p>
-    <a href="mailto:your.email@example.com" class="btn primary-btn">Send Email</a>
-  </section>
+  <!-- ABOUT SECTION -->
+  <section id="about" class="about-section">
+    <div class="about-container">
+      
+      <!-- Left Side: Rectangular Photo Box -->
+      <div class="about-img-wrapper">
+        <div class="about-rect-photo">
+          <img src="WIN_20260811_17_05_58_Pro.jpg" alt="About Mohammad Aasif Khan">
+        </div>
+      </div>
 
-  <!-- Footer -->
-  <footer>
-    <p>✨ Designed with ❤️ by Your Name | 2026</p>
-  </footer>
+      <!-- Right Side: Content Box -->
+      <div class="about-text-content">
+        <span class="badge">Who Am I?</span>
+        <h2>About Me</h2>
+        <p class="about-desc">
+          Hello! My name is <strong>Mohammad Aasif Khan</strong>. I am a dedicated and creative <strong>Web Developer</strong> who loves building user-friendly and visually appealing websites. 
+        </p>
+        <p class="about-desc">
+          My core expertise lies in crafting clean, responsive layouts using HTML and CSS. I enjoy turning complex problems into simple, beautiful, and intuitive designs.
+        </p>
+        
+        <div class="skills-tags">
+          <span>HTML5</span>
+          <span>CSS3</span>
+          <span>JavaScript</span>
+          <span>Responsive Design</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+<!-- SERVICES SECTION -->
+  <section id="services" class="section">
+    <h2>What I Do</h2>
+    <p class="section-subtext">Here are the beginner-friendly services I offer with affordable pricing.</p>
+    
+    <div class="services-grid">
+      <!-- Service 1 -->
+      <div class="service-box">
+        <div class="service-icon" style="text-align: center;">🌐
+        <h3>Web Design</h3>
+        <p class="service-price">$49 <span>/ project</span></p></div>
+        <ul class="service-features">
+          <li><span class="check-icon">✓</span> Modern & Clean Layouts</li>
+          <li><span class="check-icon">✓</span> UI/UX Wireframing</li>
+          <li><span class="check-icon">✓</span> Brand Tailored Design</li>
+        </ul>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="service-box">
+        <div class="service-icon" style="text-align: center;">💻
+        <h3>Frontend Dev</h3>
+        <p class="service-price">$79 <span>/ project</span></p></div>
+        <ul class="service-features">
+          <li><span class="check-icon">✓</span> HTML5 & CSS3 Coding</li>
+          <li><span class="check-icon">✓</span> Clean & Bug-free Code</li>
+          <li><span class="check-icon">✓</span> Interactive Animations</li>
+        </ul>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="service-box">
+        <div class="service-icon" style="text-align: center;">📱
+        <h3>Responsive Layouts</h3>
+        <p class="service-price">$39 <span>/ project</span></p></div>
+        <ul class="service-features">
+          <li><span class="check-icon">✓</span> Mobile & Tablet Friendly</li>
+          <li><span class="check-icon">✓</span> Cross-Browser Support</li>
+          <li><span class="check-icon">✓</span> Fast Loading Speed</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
 </body>
 </html>
