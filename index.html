@@ -82,7 +82,8 @@
 
     </div>
   </section>
-<!-- SERVICES SECTION -->
+
+  <!-- SERVICES SECTION -->
   <section id="services" class="section">
     <h2>What I Do</h2>
     <p class="section-subtext">Here are the beginner-friendly services I offer with affordable pricing.</p>
@@ -90,9 +91,9 @@
     <div class="services-grid">
       <!-- Service 1 -->
       <div class="service-box">
-        <div class="service-icon" style="text-align: center;">🌐
+        <div class="service-icon">🌐</div>
         <h3>Web Design</h3>
-        <p class="service-price">$49 <span>/ project</span></p></div>
+        <p class="service-price">$49 <span>/ project</span></p>
         <ul class="service-features">
           <li><span class="check-icon">✓</span> Modern & Clean Layouts</li>
           <li><span class="check-icon">✓</span> UI/UX Wireframing</li>
@@ -102,9 +103,9 @@
 
       <!-- Service 2 -->
       <div class="service-box">
-        <div class="service-icon" style="text-align: center;">💻
+        <div class="service-icon">💻</div>
         <h3>Frontend Dev</h3>
-        <p class="service-price">$79 <span>/ project</span></p></div>
+        <p class="service-price">$79 <span>/ project</span></p>
         <ul class="service-features">
           <li><span class="check-icon">✓</span> HTML5 & CSS3 Coding</li>
           <li><span class="check-icon">✓</span> Clean & Bug-free Code</li>
@@ -114,9 +115,9 @@
 
       <!-- Service 3 -->
       <div class="service-box">
-        <div class="service-icon" style="text-align: center;">📱
+        <div class="service-icon">📱</div>
         <h3>Responsive Layouts</h3>
-        <p class="service-price">$39 <span>/ project</span></p></div>
+        <p class="service-price">$39 <span>/ project</span></p>
         <ul class="service-features">
           <li><span class="check-icon">✓</span> Mobile & Tablet Friendly</li>
           <li><span class="check-icon">✓</span> Cross-Browser Support</li>
@@ -126,5 +127,42 @@
     </div>
   </section>
 
+  <!-- CONTACT US SECTION -->
+  <section id="contact" class="contact-page-section">
+    <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+      <span class="badge">Get In Touch</span>
+      <h2>Contact Us</h2>
+      <p class="section-subtext">Have a question, a project idea, or want to work together? Fill out the form below!</p>
+      
+      <div class="contact-box-wrapper">
+        <form id="contactForm" class="contact-form" novalidate>
+          <div class="input-group">
+            <label>Your Name</label>
+            <input type="text" id="userName" placeholder="Enter your full name" required>
+          </div>
+          
+          <div class="input-group">
+            <label>Your Email</label>
+            <input type="email" id="userEmail" placeholder="Enter your email address (e.g. name@gmail.com)" required>
+          </div>
+          
+          <div class="input-group">
+            <label>Your Message</label>
+            <textarea id="userMessage" rows="5" placeholder="Write your message here..." required></textarea>
+          </div>
+          
+          <button type="submit" class="btn btn-primary" style="width: 100%; cursor: pointer;">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast" class="toast-notification">
+    🎉 Successful your form! Message sent.
+  </div>
+
+  <!-- External JavaScript File Linking -->
+  <script src="script.js"></script>
 </body>
 </html>
